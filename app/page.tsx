@@ -355,7 +355,7 @@ export default function HomePage() {
           </div>
 
           <div className="footer-bottom">
-            <p>&copy; 2024 Joblee. Todos os direitos reservados.</p>
+            <p>&copy; {new Date().getFullYear()} Joblee. Todos os direitos reservados.</p>
           </div>
         </div>
       </footer>
