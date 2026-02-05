@@ -1,0 +1,44 @@
+name: Deploy
+
+on:
+  push:
+    branches: ['main']
+
+jobs:
+  Deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build Website
+        run: npm run build
+
+      - name: Install AWS CDK
+        run: npm i -g aws-cdk
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Install infra dependencies
+        run: cd infra && npm i
+
+      - name: Deploy stacks
+        run: |
+          cd infra && cdk deploy --all --require-approval never --method=direct --no-previous-parameters --no-asset-metadata --no-path-metadata --no-staging --no-version-reporting
