@@ -31,6 +31,9 @@ const Header = () => {
             <a href="#download" className="text-muted-foreground hover:text-primary transition-colors font-medium">
               Baixar App
             </a>
+            <a href="/profissional" className="text-muted-foreground hover:text-primary transition-colors font-medium text-orange-500">
+              Para profissionais
+            </a>
           </nav>
 
           {/* CTA Buttons */}
@@ -64,6 +67,9 @@ const Header = () => {
               </a>
               <a href="#download" className="text-muted-foreground hover:text-primary transition-colors font-medium py-2">
                 Baixar App
+              </a>
+              <a href="/profissional" className="text-muted-foreground hover:text-primary transition-colors font-medium py-2 text-orange-500">
+                Para profissionais
               </a>
               <div className="flex flex-col gap-2 pt-4">
                 <Button variant="ghost" className="w-full font-semibold" onClick={() => { window.open('https://app.joblee.com.br/login', '_blank') }}>

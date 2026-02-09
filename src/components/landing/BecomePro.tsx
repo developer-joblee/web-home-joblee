@@ -4,6 +4,7 @@ import { CheckCircle, ArrowRight, BadgeCheck, TrendingUp, Calendar } from "lucid
 import { useState } from "react";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
+import { useNavigate } from "react-router-dom";
 
 const emailSchema = z.string().trim().email({ message: "Please enter a valid email address" }).max(255, { message: "Email is too long" });
 
@@ -26,6 +27,7 @@ const benefits = [
 ];
 
 const BecomePro = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
@@ -92,6 +94,15 @@ const BecomePro = () => {
                   </div>
                 </div>
               ))}
+              <Button 
+                size="lg" 
+                className="w-fit bg-gradient-hero  hover:opacity-90 font-semibold h-14 text-base text-orange-500 shadow-lg bg-primary/50"
+                disabled={isSubmitting}
+                onClick={() => navigate('/profissional')}
+              >
+                Clique aqui e saiba Mais
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
             </div>
           </div>
 
@@ -147,7 +158,6 @@ const BecomePro = () => {
                   <a href="#" className="text-primary hover:underline">Política de Privacidade</a>
                 </p>
 
-                {/* Trust badges */}
                 <div className="flex items-center justify-center gap-4 pt-4 border-t border-border">
                   <div className="flex items-center gap-2 text-sm text-muted-foreground">
                     <CheckCircle className="w-4 h-4 text-secondary" />

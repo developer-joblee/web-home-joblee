@@ -41,8 +41,6 @@ const Footer = () => {
             <ul className="space-y-3">
               <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Sobre Nós</a></li>
               <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Carreiras</a></li>
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Imprensa</a></li>
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Blog</a></li>
             </ul>
           </div>
 
@@ -50,10 +48,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Para Clientes</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Encontre um profissional</a></li>
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Como funciona</a></li>
+              <li><a href="#download" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Encontre um profissional</a></li>
+              <li><a href="#how-it-works" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Como funciona</a></li>
               <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Preços</a></li>
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Segurança</a></li>
+              <li><a href="/seguranca" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Segurança</a></li>
             </ul>
           </div>
 
@@ -61,10 +59,13 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4">Para Profissionais</h4>
             <ul className="space-y-3">
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Seja parceiro</a></li>
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Recursos para profissionais</a></li>
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Histórias de sucesso</a></li>
-              <li><a href="#" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Suporte</a></li>
+              <li><a href="/profissional" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Seja parceiro</a></li>
+              <li onClick={() => {
+                window.open(
+                  `https://api.whatsapp.com/send/?phone=5511995544946&text=${encodeURIComponent('Olá, preciso de ajuda com o Joblee')}&type=phone_number&app_absent=0`,
+                  '_blank'
+                )
+              }}><a className="cursor-pointer opacity-70 hover:opacity-100 hover:text-primary transition-all">Suporte</a></li>
             </ul>
           </div>
         </div>
