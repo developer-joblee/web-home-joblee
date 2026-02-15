@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/landing/Header";
-import Footer from "@/components/landing/Footer";
+import { Footer } from "@/components/landing/Footer";
 import {
   Shield,
   ShieldCheck,

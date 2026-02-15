@@ -1,5 +1,5 @@
 import Header from "@/components/landing/Header";
-import Footer from "@/components/landing/Footer";
+import { Footer } from "@/components/landing/Footer";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,

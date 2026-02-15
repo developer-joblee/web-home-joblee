@@ -4,7 +4,7 @@ import HowItWorks from "@/components/landing/HowItWorks";
 import Services from "@/components/landing/Services";
 import BecomePro from "@/components/landing/BecomePro";
 import AppDownload from "@/components/landing/AppDownload";
-import Footer from "@/components/landing/Footer";
+import { Footer } from "@/components/landing/Footer";
 
 const Index = () => {
   return (

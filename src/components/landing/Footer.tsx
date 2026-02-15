@@ -1,7 +1,7 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import banner from "@/assets/banner-variant.png";
 
-const Footer = () => {
+export const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="container mx-auto px-4">
@@ -76,14 +76,11 @@ const Footer = () => {
             © {new Date().getFullYear()} Joblee. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-sm">
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">Política de Privacidade</a>
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">Termos de Serviço</a>
-            <a href="#" className="opacity-70 hover:opacity-100 transition-opacity">Política de Cookies</a>
+            <a href="/privacy" className="opacity-70 hover:opacity-100 transition-opacity">Política de Privacidade</a>
+            <a href="/terms-and-conditions" className="opacity-70 hover:opacity-100 transition-opacity">Termos de Serviço</a>
           </div>
         </div>
       </div>
     </footer>
   );
 };
-
-export default Footer;
