@@ -1,6 +1,5 @@
-import { Apple, Play, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import appMockup from "@/assets/app-mockup.png";
+import { Star } from "lucide-react";
+import appMockup from "/device-app.webp";
 
 const AppDownload = () => {
   return (

@@ -112,7 +112,7 @@ const BecomePro = () => {
                   size="lg"
                   className="w-full bg-gradient-hero hover:opacity-90 font-semibold h-14 text-base shadow-lg"
                 >
-                  <a href="https://parceiro.joblee.com.br">
+                  <a href="https://parceiro.joblee.com.br" target="_blank" rel="noopener noreferrer">
                     Fique disponível para clientes na Joblee
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
