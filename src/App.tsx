@@ -10,6 +10,7 @@ import { Safety } from "./pages/Safety";
 import { Terms } from "./pages/Terms";
 import { Privacy } from "./pages/privacy";
 import { DeleteAccount } from "./pages/DeleteAccount";
+import { AccountDeletion } from "./pages/AccountDeletion";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/terms-and-conditions" element={<Terms />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/delete-account" element={<DeleteAccount />} />
+          <Route path="/account-deletion" element={<AccountDeletion />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
