@@ -1,9 +1,9 @@
 import { Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
-import banner from "@/assets/banner-variant.png";
+import banner from "@/assets/banner-joblee.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-foreground text-background py-16">
+    <footer className="bg-[#0f172a] text-background py-16">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
