@@ -89,22 +89,29 @@ const termsData = [
     content: [
       {
         title:
-          'O Usuário Contratante poderá exercer seu direito de arrependimento no prazo de até 7 (sete) dias após a contratação, com a devolução integral dos valores pagos, desde que a execução do serviço não tenha sido iniciada. \n\n Fora do prazo de arrependimento, aplicam-se as seguintes regras de cancelamento',
+          'O Usuário Contratante poderá exercer seu direito de arrependimento no prazo de até 7 (sete) dias após a contratação, com a devolução integral dos valores pagos, desde que a execução do serviço não tenha sido iniciada. \n\n Fora do prazo de arrependimento, o cancelamento pelo Contratante observará as seguintes regras de reembolso, calculadas sobre o valor total pago, conforme a antecedência em relação ao horário agendado para a execução do serviço',
         content: [
           <>
-            <strong>Até 48 horas antes da execução</strong> : Será retida uma
-            taxa administrativa de 1% (um por cento) sobre o valor total do
-            serviço.
+            <strong>Mais de 24 horas antes</strong> : reembolso integral (100%)
+            do valor pago.
           </>,
           <>
-            <strong>Com menos de 12 horas de antecedência</strong> : Será
-            aplicada uma multa de 25% (vinte e cinco por cento) sobre o valor do
-            serviço, montante este destinado à compensação do prestador de
-            serviço, pelo período reservado e não utilizado.
+            <strong>Entre 24 e 12 horas antes</strong> : reembolso de 90% do
+            valor pago, sendo retida uma multa compensatória de 10%.
+          </>,
+          <>
+            <strong>Entre 12 e 6 horas antes</strong> : reembolso de 50% do
+            valor pago, sendo os 50% restantes retidos a título de multa
+            compensatória.
+          </>,
+          <>
+            <strong>Com menos de 6 horas de antecedência</strong> : não haverá
+            reembolso do valor pago.
           </>,
         ],
       },
-      'O Prestador de serviço compromete-se a honrar os agendamentos confirmados. Caso o Anunciante solicite o cancelamento do serviço com menos de 12 (doze) horas de antecedência do horário previsto para a execução, incidirá uma multa compensatória equivalente a 10% (dez por cento) do valor total do serviço. Este montante será devido à Plataforma a título de reparação pelos danos operacionais e prejuízos causados ao Contratante, podendo a Joblee abater esse valor de repasses futuros ou emitir cobrança específica contra o Anunciante.',
+      'O valor não reembolsado (multa) destina-se à compensação do Prestador de serviço pelo período reservado e não utilizado e à cobertura dos custos operacionais da Plataforma.',
+      'Caso o cancelamento ou a ausência (no-show) seja por parte do Prestador de serviço, o Contratante terá direito ao reembolso integral (100%) do valor pago. O incidente será registrado no histórico do Prestador, podendo ensejar advertência, suspensão ou exclusão definitiva da Plataforma.',
     ],
     endElement: (
       <div className="bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-md text-sm">
@@ -326,7 +333,7 @@ export const Terms = () => {
             descritos.
           </p>
           <p className="text-gray-500 text-sm italic">
-            <strong>Última atualização:</strong> 15 de Fevereiro de 2026
+            <strong>Última atualização:</strong> 20 de Junho de 2026
           </p>
         </header>
 
