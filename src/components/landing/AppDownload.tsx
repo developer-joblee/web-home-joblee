@@ -25,7 +25,7 @@ const AppDownload = () => {
               {/* App Store Buttons */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
                 <a href="#">
-                  <img width="155px" height="auto" src="/store-button-apple-black.svg" alt="Apple Store" />
+                  <img width="155px" height="auto" src="/store-button-apple-soon.svg" alt="Apple Store" />
                 </a>
                 <a href="#">
                   <img width="178px" height="auto" src="/store-button-google.png" alt="Google Play" />

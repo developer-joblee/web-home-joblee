@@ -1,4 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Seo } from "@/components/Seo";
+
 const termsData = [
   {
     title: 'OBJETO',
@@ -323,6 +325,11 @@ const TermsItem = ({
 export const Terms = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <Seo
+        title="Termos e Condições de Uso — Joblee"
+        description="Leia os Termos e Condições Gerais de Uso da plataforma Joblee."
+        path="/terms-and-conditions"
+      />
       <div className="max-w-4xl mx-auto bg-white shadow-sm border border-gray-200 rounded-xl p-8 md:p-12">
         <header className="border-b border-gray-100 pb-8 mb-8">
           <h1 className="text-xl md:text-2xl font-extrabold text-blue-900 mb-4 tracking-tight uppercase">

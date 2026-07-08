@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useSearchParams, useNavigate } from "react-router-dom";
 import { AlertTriangle, CheckCircle, Trash2 } from "lucide-react";
 import banner from "@/assets/banner-variant.png";
+import { Seo } from "@/components/Seo";
 
 export const DeleteAccount = () => {
   const [searchParams] = useSearchParams();
@@ -40,6 +41,12 @@ export const DeleteAccount = () => {
 
   return (
     <div className="bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <Seo
+        title="Excluir conta — Joblee"
+        description="Solicite a exclusão da sua conta Joblee de forma rápida e segura."
+        path="/delete-account"
+        noIndex
+      />
       <div className="max-w-3xl mx-auto">
         {/* Logo */}
         <div className="flex justify-center mb-8">

@@ -4,6 +4,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import Header from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
+import { Seo } from "@/components/Seo";
 import {
   Shield,
   ShieldCheck,
@@ -117,6 +118,11 @@ const faqItems = [
 export const Safety = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Segurança na Joblee — Profissionais verificados e pagamentos protegidos"
+        description="Saiba como a Joblee garante sua segurança: verificação de identidade e antecedentes dos profissionais, pagamentos protegidos e suporte dedicado."
+        path="/seguranca"
+      />
       <Header />
       <main>
         <section className="pt-28 pb-16 md:pt-36 md:pb-24 bg-gradient-to-b from-primary/5 to-background">

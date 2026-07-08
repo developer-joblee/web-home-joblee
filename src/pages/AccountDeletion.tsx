@@ -1,6 +1,14 @@
+import { Seo } from "@/components/Seo";
+
 export const AccountDeletion = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <Seo
+        title="Exclusão de conta — Joblee"
+        description="Entenda como solicitar a exclusão da sua conta Joblee e quais dados são removidos."
+        path="/account-deletion"
+        noIndex
+      />
       <div className="max-w-4xl mx-auto bg-white shadow-sm border border-gray-200 rounded-xl p-8 md:p-12">
         {/* Cabeçalho */}
         <header className="border-b border-gray-100 pb-8 mb-8">

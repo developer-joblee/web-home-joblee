@@ -1,5 +1,6 @@
 import Header from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
+import { Seo } from "@/components/Seo";
 import { Button } from "@/components/ui/button";
 import {
   Accordion,
@@ -138,6 +139,11 @@ const faqs = [
 export const BecomeProfessional = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Seo
+        title="Seja um profissional Joblee — Ganhe mais com seus serviços"
+        description="Cadastre-se como profissional na Joblee, receba pedidos de clientes na sua região e aumente sua renda com flexibilidade e segurança."
+        path="/profissional"
+      />
       <Header />
       <main>
         {/* Hero */}

@@ -1,6 +1,13 @@
+import { Seo } from "@/components/Seo";
+
 export const Privacy = () => {
   return (
     <div className="bg-gray-50 min-h-screen py-12 px-4 sm:px-6 lg:px-8 font-sans">
+      <Seo
+        title="Política de Privacidade — Joblee"
+        description="Saiba como a Joblee coleta, utiliza e protege seus dados pessoais, em conformidade com a LGPD."
+        path="/privacy"
+      />
       <div className="max-w-4xl mx-auto bg-white shadow-sm border border-gray-200 rounded-xl p-8 md:p-12">
         {/* Cabeçalho */}
         <header className="border-b border-gray-100 pb-8 mb-8">
