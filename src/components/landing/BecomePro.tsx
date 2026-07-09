@@ -24,7 +24,7 @@ const BecomePro = () => {
   const navigate = useNavigate();
 
   return (
-    <section id="become-pro" className="py-16 md:py-24 bg-[#020814] text-background overflow-hidden">
+    <section id="become-pro" className="py-16 md:py-24 bg-[#0f172a] text-background overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}

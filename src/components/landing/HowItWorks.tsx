@@ -23,7 +23,7 @@ const steps = [
 
 const HowItWorks = () => {
   return (
-    <section id="how-it-works" className="py-16 md:py-24 bg-[#044752]">
+    <section id="how-it-works" className="py-16 md:py-24 bg-[#0f172a]">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
