@@ -16,6 +16,21 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://joblee.com.br/precos</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://joblee.com.br/sobre</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://joblee.com.br/carreiras</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://joblee.com.br/terms-and-conditions</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
@@ -24,15 +39,5 @@
     <loc>https://joblee.com.br/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://joblee.com.br/delete-account</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  <url>
-    <loc>https://joblee.com.br/account-deletion</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.2</priority>
   </url>
 </urlset>

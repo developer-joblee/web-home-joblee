@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Button } from "@/components/ui/button";
 import { Search, PlayCircle, Star, Users, Briefcase } from "lucide-react";
+import { APP_LINKS } from "@/constants/links";
 import { useRef, useEffect, useState } from "react";
 import plumber from "@/assets/banner/plumber.webp";
 import cleaning from "@/assets/banner/cleaning.webp";
@@ -86,13 +87,19 @@ const Hero = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4">
-              <Button size="lg" className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg glow-primary h-14 px-8 text-base">
+              <Button
+                size="lg"
+                className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg glow-primary h-14 px-8 text-base"
+                onClick={() => { window.open(APP_LINKS.register, '_blank') }}
+              >
                 <Search className="w-5 h-5 mr-2" />
                 Encontrar um Profissional
               </Button>
-              <Button size="lg" variant="outline" className="font-semibold h-14 px-8 text-base border-2 hover:bg-muted">
-                <PlayCircle className="w-5 h-5 mr-2" />
-                Como Funciona
+              <Button asChild size="lg" variant="outline" className="font-semibold h-14 px-8 text-base border-2 hover:bg-muted">
+                <a href="#how-it-works">
+                  <PlayCircle className="w-5 h-5 mr-2" />
+                  Como Funciona
+                </a>
               </Button>
             </div>
 

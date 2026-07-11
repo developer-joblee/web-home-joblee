@@ -242,8 +242,8 @@ export const Safety = () => {
               Baixe o app e experimente uma plataforma construída com sua proteção em mente.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg text-base px-8">
-                Baixar o App
+              <Button asChild size="lg" className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg text-base px-8">
+                <Link to="/#download">Baixar o App</Link>
               </Button>
               <Link to="/profissional">
                 <Button size="lg" variant="outline" className="font-semibold text-base px-8 w-full">

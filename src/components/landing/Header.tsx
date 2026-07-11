@@ -1,7 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import banner from "@/assets/banner.png";
+import { APP_LINKS } from "@/constants/links";
+
+const navItems = [
+  { label: "Como funciona", to: "/#how-it-works" },
+  { label: "Serviços", to: "/#services" },
+  { label: "Baixar App", to: "/#download" },
+];
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,37 +19,33 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="/" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
               <img
                 width="170px"
                 height="auto"
                 src={banner}
                 alt="Joblee logo"
               />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-8">
-            <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors font-medium">
-              Como funciona
-            </a>
-            <a href="#services" className="text-muted-foreground hover:text-primary transition-colors font-medium">
-              Serviços
-            </a>
-            <a href="#download" className="text-muted-foreground hover:text-primary transition-colors font-medium">
-              Baixar App
-            </a>
-            <a href="/profissional" className="text-muted-foreground hover:text-primary transition-colors font-medium text-orange-500">
+            {navItems.map((item) => (
+              <Link key={item.to} to={item.to} className="text-muted-foreground hover:text-primary transition-colors font-medium">
+                {item.label}
+              </Link>
+            ))}
+            <Link to="/profissional" className="text-muted-foreground hover:text-primary transition-colors font-medium text-orange-500">
               Para profissionais
-            </a>
+            </Link>
           </nav>
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" className="font-semibold" onClick={() => { window.open('https://app.joblee.com.br/login', '_blank') }}>
+            <Button variant="ghost" className="font-semibold" onClick={() => { window.open(APP_LINKS.login, '_blank') }}>
               Entrar
             </Button>
-            <Button className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg" onClick={() => { window.open('https://app.joblee.com.br/register', '_blank') }}>
+            <Button className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg" onClick={() => { window.open(APP_LINKS.register, '_blank') }}>
               Registrar-se
             </Button>
           </div>
@@ -59,23 +63,28 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col gap-4">
-              <a href="#how-it-works" className="text-muted-foreground hover:text-primary transition-colors font-medium py-2">
-                Como funciona
-              </a>
-              <a href="#services" className="text-muted-foreground hover:text-primary transition-colors font-medium py-2">
-                Serviços
-              </a>
-              <a href="#download" className="text-muted-foreground hover:text-primary transition-colors font-medium py-2">
-                Baixar App
-              </a>
-              <a href="/profissional" className="text-muted-foreground hover:text-primary transition-colors font-medium py-2 text-orange-500">
+              {navItems.map((item) => (
+                <Link
+                  key={item.to}
+                  to={item.to}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="text-muted-foreground hover:text-primary transition-colors font-medium py-2"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <Link
+                to="/profissional"
+                onClick={() => setIsMenuOpen(false)}
+                className="text-muted-foreground hover:text-primary transition-colors font-medium py-2 text-orange-500"
+              >
                 Para profissionais
-              </a>
+              </Link>
               <div className="flex flex-col gap-2 pt-4">
-                <Button variant="ghost" className="w-full font-semibold" onClick={() => { window.open('https://app.joblee.com.br/login', '_blank') }}>
+                <Button variant="ghost" className="w-full font-semibold" onClick={() => { window.open(APP_LINKS.login, '_blank') }}>
                   Entrar
                 </Button>
-                <Button className="w-full bg-gradient-hero hover:opacity-90 font-semibold" onClick={() => { window.open('https://app.joblee.com.br/register', '_blank') }}>
+                <Button className="w-full bg-gradient-hero hover:opacity-90 font-semibold" onClick={() => { window.open(APP_LINKS.register, '_blank') }}>
                   Registrar-se
                 </Button>
               </div>

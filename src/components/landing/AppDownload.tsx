@@ -1,9 +1,10 @@
 import { Star } from "lucide-react";
 import appMockup from "/device-app.webp";
+import { STORE_LINKS } from "@/constants/links";
 
 const AppDownload = () => {
   return (
-    <section id="download" className="py-16 md:py-24 overflow-hidden">
+    <section id="download" className="py-16 md:py-24 overflow-hidden scroll-mt-20">
       <div className="container mx-auto px-4">
         <div className="relative bg-gradient-hero rounded-3xl lg:rounded-[3rem] overflow-hidden">
           {/* Background decorations */}
@@ -24,12 +25,12 @@ const AppDownload = () => {
 
               {/* App Store Buttons */}
               <div className="flex flex-wrap justify-center lg:justify-start gap-4">
-                <a href="#">
-                  <img width="155px" height="auto" src="/store-button-apple-soon.svg" alt="Apple Store" />
-                </a>
-                <a href="#">
-                  <img width="178px" height="auto" src="/store-button-google.png" alt="Google Play" />
-                </a>
+                <img width="155px" height="auto" src="/store-button-apple-soon.svg" alt="Apple Store (em breve)" />
+                {STORE_LINKS.googlePlay && (
+                  <a href={STORE_LINKS.googlePlay} target="_blank" rel="noopener noreferrer">
+                    <img width="178px" height="auto" src="/store-button-google.png" alt="Google Play" />
+                  </a>
+                )}
               </div>
 
               {/* Ratings */}

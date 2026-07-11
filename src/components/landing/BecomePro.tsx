@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, ArrowRight, BadgeCheck, TrendingUp, Calendar, ShieldCheck } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { APP_LINKS } from "@/constants/links";
 
 const benefits = [
   {
@@ -112,7 +113,7 @@ const BecomePro = () => {
                   size="lg"
                   className="w-full bg-gradient-hero hover:opacity-90 font-semibold h-14 text-base shadow-lg"
                 >
-                  <a href="https://parceiro.joblee.com.br" target="_blank" rel="noopener noreferrer">
+                  <a href={APP_LINKS.partner} target="_blank" rel="noopener noreferrer">
                     Fique disponível para clientes na Joblee
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
@@ -120,9 +121,9 @@ const BecomePro = () => {
 
                 <p className="text-sm text-muted-foreground text-center">
                   Ao se cadastrar, você concorda com nossos{" "}
-                  <a href="#" className="text-primary hover:underline">Termos de Serviço</a>
+                  <Link to="/terms-and-conditions" className="text-primary hover:underline">Termos de Serviço</Link>
                   {" "}e{" "}
-                  <a href="#" className="text-primary hover:underline">Política de Privacidade</a>
+                  <Link to="/privacy" className="text-primary hover:underline">Política de Privacidade</Link>
                 </p>
               </div>
             </div>
