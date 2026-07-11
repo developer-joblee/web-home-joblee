@@ -62,7 +62,7 @@ export const Footer = () => {
               <li><a href="/profissional" className="opacity-70 hover:opacity-100 hover:text-primary transition-all">Seja parceiro</a></li>
               <li onClick={() => {
                 window.open(
-                  `https://api.whatsapp.com/send/?phone=5511995544946&text=${encodeURIComponent('Olá, preciso de ajuda com o Joblee')}&type=phone_number&app_absent=0`,
+                  `https://api.whatsapp.com/send/?phone=5511926419617&text=${encodeURIComponent('Olá, preciso de ajuda com o Joblee')}&type=phone_number&app_absent=0`,
                   '_blank'
                 )
               }}><a className="cursor-pointer opacity-70 hover:opacity-100 hover:text-primary transition-all">Suporte</a></li>
