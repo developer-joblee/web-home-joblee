@@ -83,6 +83,9 @@ const BecomePro = () => {
                   <p className="text-muted-foreground">
                     Cadastre-se em minutos e fique visível para milhares de clientes. É fácil e grátis!
                   </p>
+                  <p className="text-sm text-muted-foreground mt-2">
+                    Você só paga a comissão de 10% quando conclui um serviço.
+                  </p>
                 </div>
 
                 {/* Trust highlights */}

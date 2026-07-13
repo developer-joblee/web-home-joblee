@@ -97,7 +97,7 @@ const faqs = [
   {
     question: "Quanto custa para me cadastrar na Joblee?",
     answer:
-      "O cadastro na Joblee é totalmente gratuito! Não cobramos nenhuma taxa para criar sua conta. Cobramos apenas uma pequena comissão sobre os serviços realizados pela plataforma.",
+      "O cadastro na Joblee é totalmente gratuito! Não cobramos nenhuma taxa para criar sua conta. Cobramos apenas uma comissão de 10% sobre o valor de cada serviço concluído — sem mensalidade, sem taxa de adesão e sem taxa de saque.",
   },
   {
     question: "Quais categorias de serviço estão disponíveis?",
@@ -112,7 +112,7 @@ const faqs = [
   {
     question: "Quando e como recebo meus pagamentos?",
     answer:
-      "Os pagamentos são processados automaticamente após a conclusão e confirmação do serviço pelo cliente. O valor é transferido para sua conta bancária cadastrada em até 2 dias úteis.",
+      "Os pagamentos são processados automaticamente após a conclusão e confirmação do serviço pelo cliente. O valor é transferido para sua conta bancária cadastrada em até 2 dias úteis, sem nenhum custo de transferência.",
   },
   {
     question: "Posso trabalhar em mais de uma categoria?",

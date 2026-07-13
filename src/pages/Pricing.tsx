@@ -27,7 +27,8 @@ const professionalBenefits = [
   "Cadastro 100% gratuito",
   "Sem mensalidade para manter o perfil",
   "Sem compromisso: cancele quando quiser",
-  "Receba o valor líquido de cada serviço concluído",
+  "Comissão de 10% por serviço concluído — e nada mais",
+  "Sem taxa de saque: o valor cai direto na sua conta",
 ];
 
 const paymentSteps = [
@@ -47,7 +48,7 @@ const paymentSteps = [
     icon: Wallet,
     step: "3",
     title: "Profissional recebe o valor líquido",
-    description: "Após a conclusão, o profissional recebe o valor do serviço de forma segura, direto na conta cadastrada.",
+    description: "Após a conclusão, o profissional recebe o valor do serviço com a comissão de 10% já descontada, direto na conta cadastrada — sem custo de transferência.",
   },
 ];
 
@@ -59,6 +60,10 @@ const faqItems = [
   {
     question: "Quando vejo a taxa de serviço?",
     answer: "Sempre antes de confirmar a contratação. No checkout, você vê o valor do serviço e a taxa de serviço da plataforma de forma separada e transparente.",
+  },
+  {
+    question: "Qual é a taxa para o profissional?",
+    answer: "A Joblee cobra apenas uma comissão de 10% sobre o valor de cada serviço concluído, descontada automaticamente do repasse. Não existe taxa de saque, mensalidade ou qualquer outra cobrança.",
   },
   {
     question: "Existe alguma mensalidade ou assinatura?",

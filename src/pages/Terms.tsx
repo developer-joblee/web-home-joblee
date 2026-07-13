@@ -83,7 +83,7 @@ const termsData = [
   {
     title: 'TARIFAS E PAGAMENTO',
     content: [
-      'Os Prestadores de serviços não pagarão para acessar as solicitações de orçamento dos usuários contratantes, ou para o envio de seus orçamentos. A plataforma cobrará uma taxa no valor de R$10,00 por serviço contratado + 10% de taxa administrativa. Em caso de pagamento via cartão de crédito será acrescido uma taxa de 1,99%. Esses custos podem ser acrescentados no orçamento enviado ao contratante.  Para mais detalhes consulte a Política de Pagamentos e Recebimentos da Joblee.',
+      'Os Prestadores de serviços não pagarão para acessar as solicitações de orçamento dos usuários contratantes, ou para o envio de seus orçamentos. A Joblee cobrará do Prestador uma comissão de 10% (dez por cento) sobre o valor de cada serviço concluído, descontada automaticamente do repasse. Não há taxa de saque ou transferência, mensalidade ou taxa de adesão para o Prestador. Do Contratante será cobrada uma taxa de serviço, exibida de forma destacada no checkout antes da confirmação do pagamento.',
     ],
   },
   {
