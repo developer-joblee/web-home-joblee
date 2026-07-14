@@ -170,7 +170,7 @@ export const BecomeProfessional = () => {
                   className="bg-gradient-hero hover:opacity-90 font-semibold h-14 text-base shadow-lg"
                   asChild
                 >
-                  <a href="/#become-pro">
+                  <a href="https://parceiro.joblee.com.br/" target="_blank" rel="noopener noreferrer">
                     Cadastre-se agora
                     <ArrowRight className="w-5 h-5 ml-2" />
                   </a>
