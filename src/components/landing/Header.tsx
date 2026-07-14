@@ -1,9 +1,17 @@
 import { Button } from "@/components/ui/button";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import banner from "@/assets/banner.png";
-import { APP_LINKS } from "@/constants/links";
 
 const navItems = [
   { label: "Como funciona", to: "/#how-it-works" },
@@ -13,6 +21,9 @@ const navItems = [
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isComingSoonOpen, setIsComingSoonOpen] = useState(false);
+
+  const openComingSoonAlert = () => setIsComingSoonOpen(true);
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-white">
@@ -42,10 +53,10 @@ const Header = () => {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center gap-3">
-            <Button variant="ghost" className="font-semibold" onClick={() => { window.open(APP_LINKS.login, '_blank') }}>
+            <Button variant="ghost" className="font-semibold" onClick={openComingSoonAlert}>
               Entrar
             </Button>
-            <Button className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg" onClick={() => { window.open(APP_LINKS.register, '_blank') }}>
+            <Button className="bg-gradient-hero hover:opacity-90 font-semibold shadow-lg" onClick={openComingSoonAlert}>
               Registrar-se
             </Button>
           </div>
@@ -81,10 +92,10 @@ const Header = () => {
                 Para profissionais
               </Link>
               <div className="flex flex-col gap-2 pt-4">
-                <Button variant="ghost" className="w-full font-semibold" onClick={() => { window.open(APP_LINKS.login, '_blank') }}>
+                <Button variant="ghost" className="w-full font-semibold" onClick={openComingSoonAlert}>
                   Entrar
                 </Button>
-                <Button className="w-full bg-gradient-hero hover:opacity-90 font-semibold" onClick={() => { window.open(APP_LINKS.register, '_blank') }}>
+                <Button className="w-full bg-gradient-hero hover:opacity-90 font-semibold" onClick={openComingSoonAlert}>
                   Registrar-se
                 </Button>
               </div>
@@ -92,6 +103,20 @@ const Header = () => {
           </div>
         )}
       </div>
+
+      <AlertDialog open={isComingSoonOpen} onOpenChange={setIsComingSoonOpen}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>Em breve!</AlertDialogTitle>
+            <AlertDialogDescription>
+              O registro e o app da Joblee estarão prontos em breve. Fique de olho!
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogAction>Entendi</AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
     </header>
   );
 };
