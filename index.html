@@ -12,12 +12,15 @@
       content="Conecte-se com profissionais confiáveis perto de você. De reparos em casa a serviços pessoais, encontre o profissional certo com a Joblee."
     />
     <meta name="author" content="Joblee" />
-    <meta name="robots" content="index, follow" />
     <meta
       name="keywords"
       content="Joblee, profissionais, serviços, encanador, mecânico, faxineiro, personal trainer, prestadores de serviço, contratar profissional"
     />
-    <link rel="canonical" href="https://joblee.com.br/" />
+    <!--
+      canonical e robots são definidos por rota via src/components/Seo.tsx (react-helmet-async).
+      Não adicionar versões estáticas aqui: o Helmet não remove tags do index.html e o Google
+      trataria os canonicals duplicados/conflitantes como inválidos.
+    -->
 
     <!-- Icons -->
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
